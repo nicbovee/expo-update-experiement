@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Text, StyleSheet, View } from 'react-native';
+import { Text, StyleSheet, ScrollView } from 'react-native';
 
 import ErrorBoundary from 'react-native-error-boundary';
 import { LoadUpdates } from './LoadUpdates';
@@ -8,12 +8,12 @@ import { AppChanges } from './AppChanges';
 export default function App() {
   return (
     <ErrorBoundary>
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <Text style={styles.hero}>Expo Update Experiment</Text>
         <LoadUpdates />
         <AppChanges />
         <StatusBar style="auto" />
-      </View>
+      </ScrollView>
     </ErrorBoundary>
   );
 }
