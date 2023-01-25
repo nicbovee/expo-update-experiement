@@ -39,7 +39,7 @@ export const LoadUpdates = () => {
       </Text>
       <Text>releaseChannel: {Updates.releaseChannel}</Text>
       <Text>updateId: {Updates.updateId ? Updates.updateId : 'Not set'}</Text>
-      <Text>No text for update</Text>
+      <Text>Trying to see why there's an error updateing</Text>
       <Button title="Fetch update" onPress={onFetchUpdateAsync} />
     </>
   );
