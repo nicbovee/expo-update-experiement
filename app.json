@@ -35,6 +35,9 @@
         "projectId": "184a9a9a-08a4-45fd-9207-e36a1326a1f7"
       }
     },
-    "owner": "nicbovee"
+    "owner": "nicbovee",
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    }
   }
 }
