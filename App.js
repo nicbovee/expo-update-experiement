@@ -19,6 +19,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       {__DEV__ && <Text style={styles.title}>In Development Mode</Text>}
+      <Text>Update channel: {JSON.stringify(update)}</Text>
       <Text>Update channel: {Updates.channel}</Text>
       <Text>isEmbeddedLaunch: {Updates.isEmbeddedLaunch}</Text>
       <Text>releaseChannel: {Updates.releaseChannel}</Text>
