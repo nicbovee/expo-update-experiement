@@ -24,12 +24,18 @@ export const LoadUpdates = () => {
   }, []);
   return (
     <>
-      {__DEV__ && <Text style={styles.title}>In Dev Mode</Text>}
+      {__DEV__ && <Text style={styles.dev}>Running: DEV MODE</Text>}
+      {!__DEV__ && <Text style={styles.live}>Running: LIVE MODE</Text>}
       <Text>Update channel: {JSON.stringify(update)}</Text>
-      <Text>Update channel: {Updates.channel}</Text>
-      <Text>isEmbeddedLaunch: {Updates.isEmbeddedLaunch}</Text>
+      <Text>
+        Update channel: {Updates.channel ? Updates.channel : 'Not set'}
+      </Text>
+      <Text>
+        isEmbeddedLaunch:{' '}
+        {Updates.isEmbeddedLaunch ? Updates.isEmbeddedLaunch : 'Not set'}
+      </Text>
       <Text>releaseChannel: {Updates.releaseChannel}</Text>
-      <Text>updateId: {Updates.updateId}</Text>
+      <Text>updateId: {Updates.updateId ? Updates.updateId : 'Not set'}</Text>
       <Text>No text for update</Text>
       <Button title="Fetch update" onPress={onFetchUpdateAsync} />
     </>
@@ -37,8 +43,18 @@ export const LoadUpdates = () => {
 };
 
 const styles = StyleSheet.create({
-  title: {
-    fontSize: 20,
+  dev: {
+    fontSize: 15,
     marginBottom: 10,
+    color: 'red',
+    paddingTop: 10,
+    paddingBottom: 10,
+  },
+  live: {
+    fontSize: 15,
+    marginBottom: 10,
+    color: 'green',
+    paddingTop: 10,
+    paddingBottom: 10,
   },
 });
