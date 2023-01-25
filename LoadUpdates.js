@@ -30,7 +30,7 @@ export const LoadUpdates = () => {
       <Text>isEmbeddedLaunch: {Updates.isEmbeddedLaunch}</Text>
       <Text>releaseChannel: {Updates.releaseChannel}</Text>
       <Text>updateId: {Updates.updateId}</Text>
-      <Text>New Text for update</Text>
+      <Text>No text for update</Text>
       <Button title="Fetch update" onPress={onFetchUpdateAsync} />
     </>
   );
