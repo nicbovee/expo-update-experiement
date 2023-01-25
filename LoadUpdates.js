@@ -24,6 +24,7 @@ export const LoadUpdates = () => {
   useEffect(() => {
     onFetchUpdateAsync();
   }, []);
+
   return (
     <>
       {__DEV__ && <Text style={styles.dev}>Running: DEV MODE</Text>}
@@ -39,7 +40,7 @@ export const LoadUpdates = () => {
       </Text>
       <Text>releaseChannel: {Updates.releaseChannel}</Text>
       <Text>updateId: {Updates.updateId ? Updates.updateId : 'Not set'}</Text>
-      <Text>Trying to get better error message</Text>
+      <Text>Does app still update with no updates call take 2?</Text>
       <Button title="Fetch update" onPress={onFetchUpdateAsync} />
     </>
   );

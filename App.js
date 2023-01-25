@@ -8,7 +8,7 @@ import { AppChanges } from './AppChanges';
 export default function App() {
   return (
     <ErrorBoundary>
-      <ScrollView style={styles.container}>
+      <ScrollView contentContainerStyle={styles.container}>
         <Text style={styles.hero}>Expo Update Experiment</Text>
         <LoadUpdates />
         <AppChanges />
