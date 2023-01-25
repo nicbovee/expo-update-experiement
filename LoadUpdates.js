@@ -4,9 +4,11 @@ import { StyleSheet, Text, Button } from 'react-native';
 
 export const LoadUpdates = () => {
   const [update, setUpdate] = useState(null);
+  const [checkedForUpdates, setCheckedForUpdates] = useState(false);
 
   async function onFetchUpdateAsync() {
     try {
+      setCheckedForUpdates(true);
       const update = await Updates.checkForUpdateAsync();
       setUpdate(update);
 
@@ -26,7 +28,8 @@ export const LoadUpdates = () => {
     <>
       {__DEV__ && <Text style={styles.dev}>Running: DEV MODE</Text>}
       {!__DEV__ && <Text style={styles.live}>Running: LIVE MODE</Text>}
-      <Text>Update channel: {JSON.stringify(update)}</Text>
+      <Text>Checked for updates? {JSON.stringify(checkedForUpdates)}</Text>
+      <Text>Update object: {JSON.stringify(update)}</Text>
       <Text>
         Update channel: {Updates.channel ? Updates.channel : 'Not set'}
       </Text>
