@@ -24,6 +24,7 @@ export default function App() {
       <Text>isEmbeddedLaunch: {Updates.isEmbeddedLaunch}</Text>
       <Text>releaseChannel: {Updates.releaseChannel}</Text>
       <Text>updateId: {Updates.updateId}</Text>
+      <Text>New Text for update</Text>
       <StatusBar style="auto" />
     </View>
   );
